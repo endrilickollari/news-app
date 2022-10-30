@@ -1,8 +1,17 @@
 import {NewsCard} from "../news-card/NewsCard";
 import {Box, Center, Flex, Square, Text, useColorModeValue} from "@chakra-ui/react";
-import {Search} from "../search/Search";
+import {news} from '../search/Search'
 
-export function NewsList() {
+export function NewsList({news}) {
+    // if(news.length === 0) {
+    //     return (
+    //         <Box>
+    //             <Flex>
+    //                 Sorry! There is no data for this topic!
+    //             </Flex>
+    //         </Box>
+    //     )
+    // }
     return (
         <Flex p='5' bgGradient={useColorModeValue(
             'radial(orange.600 1px, transparent 1px)',
@@ -12,8 +21,7 @@ export function NewsList() {
               height="570px">
             <Box w='10%'>
             </Box>
-            <Box w='80%' bgColor='white' p='5'>
-                {/*<Search/>*/}
+            <Box w='80%' p='5'>
                 <NewsCard/>
             </Box>
             <Box w='10%'>
